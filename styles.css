@@ -2,6 +2,10 @@
     font-family: Lora;
     src: url(Lora-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: lora-italic;
+    src: url(Lora-Italic-VariableFont_wght.ttf);
+}
 
 .container {
     display: flex;
