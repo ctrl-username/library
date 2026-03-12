@@ -1,9 +1,55 @@
-.container {
-  display: flex;
-  flex-direction: column;
+@font-face {
+    font-family: Lora;
+    src: url(Lora-VariableFont_wght.ttf);
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf6ec;
+    height: 100vh;
+    width: 95vw;
+    font-family: Lora;
+}
+/*header styling*/
 .container > .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    background-color: #f5edd8;
+    margin-bottom: 1rem;
+    border: solid 0.5px #e2c99a;
+}
+button {
+    background-color: #f5edd8;
+    border-radius: 7px;
+    border: solid 0.5px #e2c99a;
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+button:active {
+    background-color: #e2c99a;
+    border-radius: 7px;
+    border: solid 0.5px #e2c99a;
+    padding: 6px 14px;
+    font-size: 13px;
+}
+/*outer book section*/
+.book-section {
+    display: flex;
+    flex-direction: column;
+    border: solid 0.5px #e2c99a;
+    padding: 10px;
+    background-color: #f5edd8;
+
+    gap: 10px;
+}
+/*book item*/
+.book {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
 }
