@@ -5,6 +5,7 @@
     --color-primary-text: #3d2508;
     --color-muted-text: #8b6040;
     --color-border: #e2c99a;
+    --color-button-active: #d4b896;
 }
 
 @font-face {
@@ -51,10 +52,8 @@ button {
     border: solid 0.5px var(--color-border);
     padding: 6px 14px;
     font-size: 13px;
-    /* Headings & book titles */
-    /*font-family: "Lora", serif;*/
+    white-space: nowrap;
 
-    /* UI elements: buttons, meta, labels */
     font-family:
         "Inter",
         system-ui,
@@ -74,42 +73,66 @@ button:hover {
     background-color: var(--color-border);
     cursor: pointer;
     border: solid 0.5px var(--color-accents);
+    transition:
+        background-color 0.1s ease,
+        transform 0.1s ease;
 }
 
 button:active {
-    background-color: var(--color-border);
+    background-color: var(--color-button-active);
     border-radius: 7px;
     border: solid 0.5px var(--color-border);
     padding: 6px 14px;
     font-size: 13px;
+    transform: scale(0.95);
 }
 /*outer book section*/
 .book-section {
     display: flex;
     flex-direction: column;
     border: solid 0.5px var(--color-border);
-    padding: 10px;
+    padding: 16px;
     background-color: var(--color-header-bg);
 
-    gap: 10px;
+    gap: 4px;
 }
 /*book item*/
 .book {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
+    align-items: flex-start;
+    /*justify-content: space-around;*/
+    gap: 16px;
+    padding: 6px;
 }
 
 .book-meta {
     font-family: Inter;
+    gap: 16px;
+    align-items: flex-start;
 }
 
 #mark-as-read {
     padding: 6px 16px;
 }
 /*accent color to book author and num of pages*/
-.book-author,
+.book-author {
+    color: #a85f28;
+}
+
 .book-pages {
-    color: var(--color-accents);
+    color: var(--color-muted-text);
+}
+
+.book-buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.book img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
 }

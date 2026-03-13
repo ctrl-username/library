@@ -1,0 +1,129 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 114f00e..462bfc1 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -15,18 +15,18 @@[m
+             </div>[m
+             <div class="book-section">[m
+                 <div class="book">[m
+[31m-                    <img src="book_cover.png" alt="book image" width="100" />[m
+[32m+[m[32m                    <img src="book_cover.png" alt="book image" w />[m
+                     <div class="book-meta">[m
+                         <h3>The Pragmatic Programmer</h3>[m
+                         <div class="book-author">Dave Thomas Andy Hunt</div>[m
+[31m-                        <div class="book-pages">55 pages</div>[m
+[32m+[m[32m                        <div class="book-pages">350 pages</div>[m
+[32m+[m[32m                        <div class="book-buttons">[m
+[32m+[m[32m                            <button>Delete</button>[m
+[32m+[m[32m                            <button id="mark-as-read">Mark as read</button>[m
+[32m+[m[32m                            <button>Share</button>[m
+[32m+[m[32m                        </div>[m
+                     </div>[m
+                 </div>[m
+[31m-                <div class="book-buttons">[m
+[31m-                    <button>Delete</button>[m
+[31m-                    <button id="mark-as-read">Mark As read</button>[m
+[31m-                    <button>Share</button>[m
+[31m-                </div>[m
+             </div>[m
+         </div>[m
+     </body>[m
+[1mdiff --git a/styles.css b/styles.css[m
+[1mindex 139bb8b..1f66f5e 100644[m
+[1m--- a/styles.css[m
+[1m+++ b/styles.css[m
+[36m@@ -5,6 +5,7 @@[m
+     --color-primary-text: #3d2508;[m
+     --color-muted-text: #8b6040;[m
+     --color-border: #e2c99a;[m
+[32m+[m[32m    --color-button-active: #d4b896;[m
+ }[m
+ [m
+ @font-face {[m
+[36m@@ -51,10 +52,8 @@[m [mbutton {[m
+     border: solid 0.5px var(--color-border);[m
+     padding: 6px 14px;[m
+     font-size: 13px;[m
+[31m-    /* Headings & book titles */[m
+[31m-    /*font-family: "Lora", serif;*/[m
+[32m+[m[32m    white-space: nowrap;[m
+ [m
+[31m-    /* UI elements: buttons, meta, labels */[m
+     font-family:[m
+         "Inter",[m
+         system-ui,[m
+[36m@@ -74,42 +73,66 @@[m [mbutton:hover {[m
+     background-color: var(--color-border);[m
+     cursor: pointer;[m
+     border: solid 0.5px var(--color-accents);[m
+[32m+[m[32m    transition:[m
+[32m+[m[32m        background-color 0.1s ease,[m
+[32m+[m[32m        transform 0.1s ease;[m
+ }[m
+ [m
+ button:active {[m
+[31m-    background-color: var(--color-border);[m
+[32m+[m[32m    background-color: var(--color-button-active);[m
+     border-radius: 7px;[m
+     border: solid 0.5px var(--color-border);[m
+     padding: 6px 14px;[m
+     font-size: 13px;[m
+[32m+[m[32m    transform: scale(0.95);[m
+ }[m
+ /*outer book section*/[m
+ .book-section {[m
+     display: flex;[m
+     flex-direction: column;[m
+     border: solid 0.5px var(--color-border);[m
+[31m-    padding: 10px;[m
+[32m+[m[32m    padding: 16px;[m
+     background-color: var(--color-header-bg);[m
+ [m
+[31m-    gap: 10px;[m
+[32m+[m[32m    gap: 4px;[m
+ }[m
+ /*book item*/[m
+ .book {[m
+     display: flex;[m
+[31m-    align-items: center;[m
+[31m-    justify-content: space-around;[m
+[31m-    gap: 10px;[m
+[32m+[m[32m    align-items: flex-start;[m
+[32m+[m[32m    /*justify-content: space-around;*/[m
+[32m+[m[32m    gap: 16px;[m
+[32m+[m[32m    padding: 6px;[m
+ }[m
+ [m
+ .book-meta {[m
+     font-family: Inter;[m
+[32m+[m[32m    gap: 16px;[m
+[32m+[m[32m    align-items: flex-start;[m
+ }[m
+ [m
+ #mark-as-read {[m
+     padding: 6px 16px;[m
+ }[m
+ /*accent color to book author and num of pages*/[m
+[31m-.book-author,[m
+[32m+[m[32m.book-author {[m
+[32m+[m[32m    color: #a85f28;[m
+[32m+[m[32m}[m
+[32m+[m
+ .book-pages {[m
+[31m-    color: var(--color-accents);[m
+[32m+[m[32m    color: var(--color-muted-text);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.book-buttons {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: flex-end;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    gap: 8px;[m
+[32m+[m[32m    margin-top: 8px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.book img {[m
+[32m+[m[32m    width: 80px;[m
+[32m+[m[32m    height: 110px;[m
+[32m+[m[32m    object-fit: cover;[m
+ }[m
