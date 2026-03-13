@@ -1,3 +1,12 @@
+:root {
+    --color-header-bg: #f5edd8;
+    --color-card-bg: #fbf6ec;
+    --color-accents: #c97a3a;
+    --color-primary-text: #3d2508;
+    --color-muted-text: #8b6040;
+    --color-border: #e2c99a;
+}
+
 @font-face {
     font-family: Lora;
     src: url(Lora/Lora-VariableFont_wght.ttf);
@@ -14,10 +23,11 @@
 .container {
     display: flex;
     flex-direction: column;
-    background-color: #fbf6ec;
+    background-color: var(--color-card-bg);
     height: 100vh;
     width: 95vw;
     font-family: Lora;
+    color: var(--color-primary-text);
 }
 /*header styling*/
 .container > .header {
@@ -25,14 +35,14 @@
     justify-content: space-between;
     padding: 0 15px;
     align-items: center;
-    background-color: #f5edd8;
+    background-color: var(--color-header-bg);
     margin-bottom: 1rem;
-    border: solid 0.5px #e2c99a;
+    border: solid 0.5px var(--color-border);
 }
 button {
-    background-color: #f5edd8;
+    background-color: var(--color-card-bg);
     border-radius: 7px;
-    border: solid 0.5px #e2c99a;
+    border: solid 0.5px var(--color-border);
     padding: 6px 14px;
     font-size: 13px;
     /* Headings & book titles */
@@ -55,9 +65,9 @@ button {
 }
 
 button:active {
-    background-color: #e2c99a;
+    background-color: var(--color-border);
     border-radius: 7px;
-    border: solid 0.5px #e2c99a;
+    border: solid 0.5px var(--color-border);
     padding: 6px 14px;
     font-size: 13px;
 }
@@ -65,9 +75,9 @@ button:active {
 .book-section {
     display: flex;
     flex-direction: column;
-    border: solid 0.5px #e2c99a;
+    border: solid 0.5px var(--color-border);
     padding: 10px;
-    background-color: #f5edd8;
+    background-color: var(--color-header-bg);
 
     gap: 10px;
 }
@@ -85,4 +95,9 @@ button:active {
 
 #mark-as-read {
     padding: 6px 16px;
+}
+/*accent color to book author and num of pages*/
+.book-author,
+.book-pages {
+    color: var(--color-accent);
 }
