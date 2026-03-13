@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: Lora;
-    src: url(Lora/Lora-VariableFont_wght.ttf);
+    src: url(Lora/static/Lora-Regular.ttf);
 }
 @font-face {
     font-family: lora-italic;
@@ -45,6 +45,7 @@ body {
     margin-bottom: 1rem;
     border: solid 0.5px var(--color-border);
     font-weight: 500;
+    font-style: normal;
 }
 button {
     background-color: var(--color-card-bg);
