@@ -20,12 +20,17 @@
     src: url(Inter/Inter-VariableFont_opsz_wght.ttf);
 }
 
+body {
+    margin: 0;
+    background-color: #ede5c0;
+}
 .container {
     display: flex;
     flex-direction: column;
     background-color: var(--color-card-bg);
     height: 100vh;
-    width: 95vw;
+    margin: 0 auto;
+    max-width: 600px;
     font-family: Lora;
     color: var(--color-primary-text);
 }
@@ -38,6 +43,7 @@
     background-color: var(--color-header-bg);
     margin-bottom: 1rem;
     border: solid 0.5px var(--color-border);
+    font-weight: 500;
 }
 button {
     background-color: var(--color-card-bg);
@@ -62,6 +68,12 @@ button {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
+}
+
+button:hover {
+    background-color: var(--color-border);
+    cursor: pointer;
+    border: solid 0.5px var(--color-accents);
 }
 
 button:active {
@@ -99,5 +111,5 @@ button:active {
 /*accent color to book author and num of pages*/
 .book-author,
 .book-pages {
-    color: var(--color-accent);
+    color: var(--color-accents);
 }
