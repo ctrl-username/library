@@ -15,8 +15,18 @@ function Book(title, author, pages, read) {
 Book.prototype.info = function () {
   return `book id: ${this.id} ${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "read" : "not read"}`;
 };
-function addBookToLibrary() {}
+function addBookToLibrary(title, author, pages, read) {
+  const book = new Book(title, author, pages, read);
+  myLibrary.push(book);
+}
 
-book1 = new Book("The pragmatic Programmer", "Andy hunt", "55", true);
+addBookToLibrary(
+  "The pragmatic Programmer",
+  "Dave Thomas, Andy hunt",
+  "350",
+  true,
+);
 
-console.log(book1.info());
+addBookToLibrary("Clean Code", "Robert Martin", 431, "read");
+
+console.log(myLibrary);
