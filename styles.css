@@ -1,139 +1,140 @@
 :root {
-    --color-header-bg: #f5edd8;
-    --color-card-bg: #fbf6ec;
-    --color-accents: #c97a3a;
-    --color-primary-text: #3d2508;
-    --color-muted-text: #8b6040;
-    --color-border: #e2c99a;
-    --color-button-active: #d4b896;
+  --color-header-bg: #f5edd8;
+  --color-card-bg: #fbf6ec;
+  --color-accents: #c97a3a;
+  --color-primary-text: #3d2508;
+  --color-muted-text: #8b6040;
+  --color-border: #e2c99a;
+  --color-button-active: #d4b896;
 }
 
 @font-face {
-    font-family: Lora;
-    src: url(Lora/static/Lora-Regular.ttf);
+  font-family: Lora;
+  src: url(Lora/static/Lora-Regular.ttf);
 }
 @font-face {
-    font-family: lora-italic;
-    src: url(Lora/Lora-Italic-VariableFont_wght.ttf);
+  font-family: lora-italic;
+  src: url(Lora/Lora-Italic-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family: Inter;
-    src: url(Inter/Inter-VariableFont_opsz_wght.ttf);
+  font-family: Inter;
+  src: url(Inter/Inter-VariableFont_opsz_wght.ttf);
 }
 
 body {
-    margin: 0;
-    background-color: #ede5c0;
+  margin: 0;
+  background-color: #ede5c0;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-card-bg);
-    height: 100vh;
-    margin: 0 auto;
-    max-width: 600px;
-    font-family: Lora;
-    color: var(--color-primary-text);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-card-bg);
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 600px;
+  font-family: Lora;
+  color: var(--color-primary-text);
 }
 /*header styling*/
 .container > .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-    align-items: center;
-    background-color: var(--color-header-bg);
-    margin-bottom: 1rem;
-    border: solid 0.5px var(--color-border);
-    font-weight: 500;
-    font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
+  background-color: var(--color-header-bg);
+  margin-bottom: 1rem;
+  border: solid 0.5px var(--color-border);
+  font-weight: 500;
+  font-style: normal;
 }
 button {
-    background-color: var(--color-card-bg);
-    border-radius: 7px;
-    border: solid 0.5px var(--color-border);
-    padding: 6px 14px;
-    font-size: 13px;
-    white-space: nowrap;
+  background-color: var(--color-card-bg);
+  border-radius: 7px;
+  border: solid 0.5px var(--color-border);
+  padding: 6px 14px;
+  font-size: 13px;
+  white-space: nowrap;
 
-    font-family:
-        "Inter",
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 button:hover {
-    background-color: var(--color-border);
-    cursor: pointer;
-    border: solid 0.5px var(--color-accents);
-    transition:
-        background-color 0.1s ease,
-        transform 0.1s ease;
+  background-color: var(--color-border);
+  cursor: pointer;
+  border: solid 0.5px var(--color-accents);
+  transition:
+    background-color 0.1s ease,
+    transform 0.1s ease;
 }
 
 button:active {
-    background-color: var(--color-button-active);
-    border-radius: 7px;
-    border: solid 0.5px var(--color-border);
-    padding: 6px 14px;
-    font-size: 13px;
-    transform: scale(0.95);
+  background-color: var(--color-button-active);
+  border-radius: 7px;
+  border: solid 0.5px var(--color-border);
+  padding: 6px 14px;
+  font-size: 13px;
+  transform: scale(0.95);
 }
 /*outer book section*/
 .book-section {
-    display: flex;
-    flex-direction: column;
-    border: solid 0.5px var(--color-border);
-    padding: 16px;
-    background-color: var(--color-header-bg);
+  display: flex;
+  flex-direction: column;
+  border: solid 0.5px var(--color-border);
+  padding: 16px;
+  background-color: var(--color-header-bg);
+  margin-bottom: 16px;
 
-    gap: 4px;
+  gap: 4px;
 }
 /*book item*/
 .book {
-    display: flex;
-    align-items: flex-start;
-    /*justify-content: space-around;*/
-    gap: 16px;
-    padding: 6px;
+  display: flex;
+  align-items: flex-start;
+  /*justify-content: space-around;*/
+  gap: 16px;
+  padding: 6px;
 }
 
 .book-meta {
-    font-family: Inter;
-    gap: 16px;
-    align-items: flex-start;
+  font-family: Inter;
+  gap: 16px;
+  align-items: flex-start;
 }
 
 #mark-as-read {
-    padding: 6px 16px;
+  padding: 6px 16px;
 }
 /*accent color to book author and num of pages*/
 .book-author {
-    color: #a85f28;
+  color: #a85f28;
 }
 
 .book-pages {
-    color: var(--color-muted-text);
+  color: var(--color-muted-text);
 }
 
 .book-buttons {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 8px;
-    margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 .book img {
-    width: 80px;
-    height: 110px;
-    object-fit: cover;
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
 }
