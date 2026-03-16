@@ -11,7 +11,10 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-
+// toggle read method
+Book.prototype.toggleRead = function () {
+  this.read = !this.read;
+};
 Book.prototype.info = function () {
   return `book id: ${this.id} ${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "read" : "not read"}`;
 };
@@ -27,6 +30,6 @@ addBookToLibrary(
   true,
 );
 
-addBookToLibrary("Clean Code", "Robert Martin", 431, "read");
-
+addBookToLibrary("Clean Code", "Robert Martin", 431, true);
+myLibrary[0].toggleRead();
 console.log(myLibrary);
