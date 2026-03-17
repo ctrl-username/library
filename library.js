@@ -80,7 +80,7 @@ function createBookCard(book) {
 
   const markAsReadButton = document.createElement("button");
   markAsReadButton.id = "mark-as-read";
-  markAsReadButton.textContent = `${book.read ? "Mark as read" : "Un-mark as read"}`;
+  markAsReadButton.textContent = `${book.read ? "Mark as unread" : "Mark as read"}`;
 
   // share button
 
