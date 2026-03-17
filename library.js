@@ -106,17 +106,26 @@ function createBookCard(book) {
 
   return bookDiv;
 }
+// render cards
 
-//display
-function displayLibrary(index) {
-  const libraryContainer = document.getElementById("library-container");
+function renderBookCards() {
+  const libraryShelf = document.getElementById("books-section");
+
+  libraryShelf.innerHTML = "";
+
   myLibrary.forEach((book) => {
     const bookSection = document.createElement("div");
     bookSection.className = "book-section";
 
     bookSection.appendChild(createBookCard(book));
 
-    libraryContainer.appendChild(bookSection);
+    libraryShelf.appendChild(bookSection);
   });
 }
+
+//display
+function displayLibrary(index) {
+  renderBookCards();
+}
+
 displayLibrary();
