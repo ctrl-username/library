@@ -109,14 +109,14 @@ function createBookCard(book) {
 
 //display
 function displayLibrary(index) {
-  libraryContainer = document.getElementById("library-container");
+  const libraryContainer = document.getElementById("library-container");
+  myLibrary.forEach((book) => {
+    const bookSection = document.createElement("div");
+    bookSection.className = "book-section";
 
-  const bookSection = document.createElement("div");
-  bookSection.className = "book-section";
+    bookSection.appendChild(createBookCard(book));
 
-  bookSection.appendChild(createBookCard(myLibrary[index]));
-  // bookSection.appendChild(createBookCard(myLibrary[0]));
-  libraryContainer.appendChild(bookSection);
+    libraryContainer.appendChild(bookSection);
+  });
 }
-displayLibrary(1);
-displayLibrary(0);
+displayLibrary();
