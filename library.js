@@ -123,6 +123,15 @@ function renderBookCards() {
   });
 }
 
+// delete book function
+
+function removeBookFromLibrary(bookId) {
+  const bookIndex = myLibrary.findIndex((book) => book.id === bookId);
+  if (bookIndex !== -1) {
+    myLibrary.splice(bookIndex, 1);
+  }
+}
+
 //display
 function displayLibrary(index) {
   renderBookCards();
