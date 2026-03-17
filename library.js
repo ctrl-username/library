@@ -32,15 +32,16 @@ addBookToLibrary(
 
 addBookToLibrary("Clean Code", "Robert Martin", 431, false);
 
-myLibrary[0].toggleRead();
-myLibrary[1].toggleRead();
-myLibrary[0].toggleRead();
+// myLibrary[0].toggleRead();
+// myLibrary[1].toggleRead();
+// myLibrary[0].toggleRead();
 console.log(myLibrary);
 
 function createBookCard(book) {
   // book
   const bookDiv = document.createElement("div");
   bookDiv.className = "book";
+  bookDiv.dataset.bookId = book.id;
 
   //book cover img
   const image = document.createElement("img");
@@ -79,7 +80,7 @@ function createBookCard(book) {
   // mark as read button
 
   const markAsReadButton = document.createElement("button");
-  markAsReadButton.id = "mark-as-read";
+  markAsReadButton.className = "mark-as-read";
   markAsReadButton.textContent = `${book.read ? "Mark as unread" : "Mark as read"}`;
 
   // share button
@@ -130,6 +131,7 @@ function removeBookFromLibrary(bookId) {
   if (bookIndex !== -1) {
     myLibrary.splice(bookIndex, 1);
   }
+  renderBookCards();
 }
 
 //display

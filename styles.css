@@ -113,7 +113,7 @@ button:active {
   align-items: flex-start;
 }
 
-#mark-as-read {
+.mark-as-read {
   padding: 6px 16px;
 }
 /*accent color to book author and num of pages*/
