@@ -76,13 +76,17 @@ function createBookCard(book) {
   const deleteButton = document.createElement("button");
   deleteButton.className = "delete-button";
   deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", () => removeBookFromLibrary(book.id));
 
   // mark as read button
 
   const markAsReadButton = document.createElement("button");
   markAsReadButton.className = "mark-as-read";
   markAsReadButton.textContent = `${book.read ? "Mark as unread" : "Mark as read"}`;
-
+  markAsReadButton.addEventListener("click", () => {
+    book.toggleRead();
+    renderBookCards();
+  });
   // share button
 
   const shareButton = document.createElement("button");
