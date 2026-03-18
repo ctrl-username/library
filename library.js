@@ -41,7 +41,6 @@ function createBookCard(book) {
   // book
   const bookDiv = document.createElement("div");
   bookDiv.className = "book";
-  bookDiv.dataset.bookId = book.id;
 
   //book cover img
   const image = document.createElement("img");
@@ -121,6 +120,7 @@ function renderBookCards() {
   myLibrary.forEach((book) => {
     const bookSection = document.createElement("div");
     bookSection.className = "book-section";
+    bookSection.dataset.bookId = book.id;
 
     bookSection.appendChild(createBookCard(book));
 
@@ -134,8 +134,12 @@ function removeBookFromLibrary(bookId) {
   const bookIndex = myLibrary.findIndex((book) => book.id === bookId);
   if (bookIndex !== -1) {
     myLibrary.splice(bookIndex, 1);
+    const removeBookGUI = document.querySelector(`[data-book-id="${bookId}"]`);
+    if (removeBookGUI) {
+      removeBookGUI.remove();
+    }
+    console.log("state");
   }
-  renderBookCards();
 }
 
 function guiAddBook() {}

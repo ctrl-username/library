@@ -147,3 +147,8 @@ button:active {
   height: 110px;
   object-fit: cover;
 }
+
+.add_book_modal {
+  --modal-border: 1px solid black;
+  border: var(--modal-border);
+}
