@@ -138,6 +138,7 @@ function removeBookFromLibrary(bookId) {
   renderBookCards();
 }
 
+function guiAddBook() {}
 //display
 function displayLibrary(index) {
   renderBookCards();

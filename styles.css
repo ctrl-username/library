@@ -35,8 +35,11 @@ body {
   font-family: Lora;
   color: var(--color-primary-text);
 }
+
+.header {
+}
 /*header styling*/
-.container > .header {
+.container .header {
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
@@ -46,6 +49,12 @@ body {
   border: solid 0.5px var(--color-border);
   font-weight: 500;
   font-style: normal;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* box-shadow: 0 0.1px 3px rgba(0, 0, 0, 0.6); */
+  top: 0;
+  /* box-shadow: #3d2508; */
 }
 button {
   background-color: var(--color-card-bg);
