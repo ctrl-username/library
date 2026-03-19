@@ -146,6 +146,7 @@ function toggleBookModalState() {
   const openBookModal = document.querySelector("#add_book_btn");
   const closeModal = document.querySelector("#close_book_dialog");
   const bookModal = document.querySelector("#add_book_dialog");
+  const bookForm = document.querySelector("#book-form");
   openBookModal.addEventListener("click", () => {
     console.log("clicked me");
     bookModal.showModal();
@@ -168,6 +169,7 @@ function toggleBookModalState() {
     if ((title || author !== "") && pages > 0) {
       addBookToLibrary(title, author, pages - 0, read);
       bookModal.close();
+      bookForm.reset();
       renderBookCards();
     }
   }
