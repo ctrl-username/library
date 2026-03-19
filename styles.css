@@ -313,3 +313,36 @@ button:active {
   width: 15px;
   height: 15px;
 }
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 20px;
+  border-top: 0.5px solid var(--color-border);
+}
+#cancel-btn #submit {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+#cancel-btn {
+  background: #fbf6ec;
+  color: #5c3d1e;
+}
+#submit {
+}
+
+#cancel-btn:hover {
+  background: #ede0cc;
+}
+#submit {
+  background: #c97a3a;
+  color: #fff;
+  border-color: #c97a3a;
+}
+#submit:hover {
+  background: #b56828;
+}
