@@ -15,40 +15,40 @@
             <h1>Library</h1>
             <button id="add_book_btn">Add book</button>
         </div>
-        <dialog class="modal-overlay " id="add_book_dialog">
-            <div class="modal">
-                <div class="modal-header">
-                    <h2>Add a book</h2> <button id="close_book_dialog">X</button>
-                </div>
-                <form action="" id="book-form">
-                    <div class="modal-body">
-                        <div class="field">
-                            <label for="title">Title:</label>
-                            <input type="text" id="title" placeholder="e.g The Pragmatic Programmer" required>
-                        </div>
-                        <div class="field">
-                            <label for="author">Author:</label>
-                            <input type="text" id="author" placeholder="e.g Dave Thomas" required>
-                        </div>
-                        <div class="field">
-                            <label for="pages">Pages:</label>
-                            <input type="number" id="pages" placeholder="e.g. 352" required>
-                        </div>
-                        <div class="checkbox-row">
-                            <input type="checkbox" id="read">
-                            <label for="read">Already read</label>
-                        </div>
+        <dialog class="modal" id="add_book_dialog">
 
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="reset" id="cancel-btn">
-                            Reset
-                        </button>
-                        <button type="submit" id="submit">Submit</button>
-                    </div>
-                </form>
+            <div class="modal-header">
+                <h2>Add a book</h2> <button id="close_book_dialog">X</button>
             </div>
+            <form action="" id="book-form">
+                <div class="modal-body">
+                    <div class="field">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" placeholder="e.g The Pragmatic Programmer" required>
+                    </div>
+                    <div class="field">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" placeholder="e.g Dave Thomas" required>
+                    </div>
+                    <div class="field">
+                        <label for="pages">Pages:</label>
+                        <input type="number" id="pages" placeholder="e.g. 352" required>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="read">
+                        <label for="read">Already read</label>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" id="cancel-btn">
+                        Reset
+                    </button>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+
         </dialog>
         <div id="books-section"></div>
 

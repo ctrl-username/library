@@ -147,6 +147,7 @@ function toggleBookModalState() {
   const closeModal = document.querySelector("#close_book_dialog");
   const bookModal = document.querySelector("#add_book_dialog");
   const bookForm = document.querySelector("#book-form");
+  bookModal.showModal();
   openBookModal.addEventListener("click", () => {
     console.log("clicked me");
     bookModal.showModal();
