@@ -153,6 +153,24 @@ function toggleBookModalState() {
   closeModal.addEventListener("click", () => {
     bookModal.close();
   });
+
+  const submitButton = document.querySelector("#submit");
+  submitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    getModalInputValues();
+  });
+
+  function getModalInputValues() {
+    const title = document.querySelector("#title").value;
+    const author = document.querySelector("#author").value;
+    const pages = document.querySelector("#pages").value;
+    const read = document.querySelector("#read").checked;
+    if ((title || author !== "") && pages > 0) {
+      addBookToLibrary(title, author, pages - 0, read);
+      bookModal.close();
+      renderBookCards();
+    }
+  }
 }
 //display
 function displayLibrary(index) {
