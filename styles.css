@@ -275,10 +275,27 @@ button:active {
 .field {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+
   font-size: 8px;
   color: var(--color-muted-text);
-  padding: 16px;
+  gap: 5px;
+}
+.field label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+.field input {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  background-color: var(--color-header-bg);
+  border: 0.5px solid var(--color-border);
+  border-radius: 7px;
+  padding: 8px 12px;
+  outline: none;
+  color: var(--color-muted-text);
+}
+.field input:focus {
+  color: var(--color-accents);
 }
 .checkbox-row {
   display: flex;
