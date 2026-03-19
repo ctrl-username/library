@@ -21,20 +21,6 @@ function addBookToLibrary(title, author, pages, read) {
   myLibrary.push(book);
 }
 
-addBookToLibrary(
-  "The pragmatic Programmer",
-  "Dave Thomas, Andy hunt",
-  350,
-  false,
-);
-
-addBookToLibrary("Clean Code", "Robert Martin", 431, false);
-
-// myLibrary[0].toggleRead();
-// myLibrary[1].toggleRead();
-// myLibrary[0].toggleRead();
-console.log(myLibrary);
-
 function createBookCard(book) {
   // book
   const bookDiv = document.createElement("div");
@@ -136,7 +122,6 @@ function removeBookFromLibrary(bookId) {
     if (removeBookGUI) {
       removeBookGUI.remove();
     }
-    console.log("state");
   }
 }
 
@@ -147,7 +132,6 @@ function toggleBookModalState() {
   const bookForm = document.querySelector("#book-form");
 
   openBookModal.addEventListener("click", () => {
-    console.log("clicked me");
     bookModal.showModal();
   });
   closeModal.addEventListener("click", () => {
@@ -178,5 +162,15 @@ function displayLibrary(index) {
   renderBookCards();
   toggleBookModalState();
 }
+
+//add initial b...
+addBookToLibrary(
+  "The pragmatic Programmer",
+  "Dave Thomas, Andy hunt",
+  350,
+  false,
+);
+
+addBookToLibrary("Clean Code", "Robert Martin", 431, false);
 
 displayLibrary();
