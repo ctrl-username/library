@@ -148,7 +148,14 @@ button:active {
   object-fit: cover;
 }
 
-.add_book_modal {
-  --modal-border: 1px solid black;
+.modal-overlay {
+  --modal-border: 1px solid var(--color-card-bg);
   border: var(--modal-border);
+}
+
+.modal-overlay .modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
 }

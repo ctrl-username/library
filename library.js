@@ -142,10 +142,22 @@ function removeBookFromLibrary(bookId) {
   }
 }
 
-function guiAddBook() {}
+function toggleBookModalState() {
+  const openBookModal = document.querySelector("#add_book_btn");
+  const closeModal = document.querySelector("#close_book_dialog");
+  const bookModal = document.querySelector("#add_book_dialog");
+  openBookModal.addEventListener("click", () => {
+    console.log("clicked me");
+    bookModal.showModal();
+  });
+  closeModal.addEventListener("click", () => {
+    bookModal.close();
+  });
+}
 //display
 function displayLibrary(index) {
   renderBookCards();
+  toggleBookModalState();
 }
 
 displayLibrary();
