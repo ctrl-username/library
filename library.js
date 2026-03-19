@@ -167,7 +167,7 @@ function toggleBookModalState() {
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
     const read = document.querySelector("#read").checked;
-    if ((title || author !== "") && pages > 0) {
+    if (title !== "" && author !== "" && pages > 0) {
       addBookToLibrary(title, author, pages - 0, read);
       bookModal.close();
       bookForm.reset();
