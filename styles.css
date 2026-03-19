@@ -6,6 +6,8 @@
   --color-muted-text: #8b6040;
   --color-border: #e2c99a;
   --color-button-active: #d4b896;
+  --font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+  --image-width: clamp(80px, 20vw, 160px);
 }
 
 @font-face {
@@ -22,6 +24,7 @@
 }
 
 body {
+  font-size: var(--font-size);
   margin: 0;
   background-color: #ede5c0;
 }
@@ -143,8 +146,8 @@ button:active {
 }
 
 .book img {
-  width: 80px;
-  height: 110px;
+  width: var(--image-width);
+  height: auto;
   object-fit: cover;
 }
 
