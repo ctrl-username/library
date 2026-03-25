@@ -138,8 +138,8 @@ function toggleBookModalState() {
     bookModal.close();
   });
 
-  const submitButton = document.querySelector("#submit");
-  submitButton.addEventListener("click", (e) => {
+  // const submitButton = document.querySelector("#submit");
+  bookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     getModalInputValues();
   });
