@@ -1,20 +1,34 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  if (!new.target) {
-    throw new Error("Book must be instantiated with 'new'");
+class Book {
+  constructor(title, author, pages, read) {
+    this.id = crypto.randomUUID();
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
   }
-  //
-  this.id = crypto.randomUUID();
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+
+  toggleRead() {
+    this.read = !this.read;
+  }
 }
-// toggle read method
-Book.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
+
+// function Book(title, author, pages, read) {
+//   if (!new.target) {
+//     throw new Error("Book must be instantiated with 'new'");
+//   }
+//   //
+//   this.id = crypto.randomUUID();
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
+// // toggle read method
+// Book.prototype.toggleRead = function () {
+//   this.read = !this.read;
+// };
 
 function addBookToLibrary(title, author, pages, read) {
   const book = new Book(title, author, pages, read);
